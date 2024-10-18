@@ -4,7 +4,7 @@
     
     <groupId>io.gdcc</groupId>
     <artifactId>parent</artifactId>
-    <version>0.11.1-SNAPSHOT</version>
+    <version>0.10.2-SNAPSHOT</version>
     
     <organization>
         <name>Global Dataverse Community Consortium</name>
@@ -88,7 +88,9 @@
         <skipEnforce.jdk-version>false</skipEnforce.jdk-version>
         <skipEnforce.log-libs>true</skipEnforce.log-libs>
         <skipEnforce.convergence>true</skipEnforce.convergence>
+        <skipEnforce.pomcheck-warn-is-no-error>false</skipEnforce.pomcheck-warn-is-no-error>
         <skipSign>false</skipSign>
+        <skipRelease>false</skipRelease>
         
         <!-- Dependencies -->
         <dataverse.spi.version>2.0.0</dataverse.spi.version>
@@ -289,6 +291,7 @@
                 <artifactId>nexus-staging-maven-plugin</artifactId>
                 <extensions>true</extensions>
                 <configuration>
+                    <skipStaging>${skipRelease}</skipStaging>
                     <serverId>ossrh</serverId>
                     <nexusUrl>https://s01.oss.sonatype.org</nexusUrl>
                     <autoReleaseAfterClose>true</autoReleaseAfterClose>
@@ -547,7 +550,8 @@
                                 <configuration>
                                     <rules>
                                         <CheckMavenCentral implementation="org.kordamp.maven.enforcer.checker.CheckMavenCentral">
-                                            <failOnWarning>true</failOnWarning>
+                                            <failOnWarning>!${skipEnforce.pomcheck-warn-is-no-error}</failOnWarning>
+                                            <release>!${skipRelease}</release>
                                         </CheckMavenCentral>
                                     </rules>
                                 </configuration>
