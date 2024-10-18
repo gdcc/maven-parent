@@ -4,7 +4,7 @@
     
     <groupId>io.gdcc</groupId>
     <artifactId>parent</artifactId>
-    <version>0.10.2</version>
+    <version>0.11.2-SNAPSHOT</version>
     
     <organization>
         <name>Global Dataverse Community Consortium</name>
