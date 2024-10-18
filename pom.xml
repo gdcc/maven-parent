@@ -494,8 +494,8 @@
             <id>coverage</id>
             <properties>
                 <sonar.host.url>https://sonarcloud.io</sonar.host.url>
-                <sonar.organization>gdcc</sonar.organization>
-                <sonar.projectKey>you-need-to-configure-this</sonar.projectKey>
+                <sonar.organization>${project.github.org}</sonar.organization>
+                <sonar.projectKey>${project.github.org}_${project.github.repo}</sonar.projectKey>
                 <sonar.moduleKey>${project.groupId}:${project.artifactId}</sonar.moduleKey>
                 <sonar.java.coveragePlugin>jacoco</sonar.java.coveragePlugin>
             </properties>
