@@ -126,7 +126,6 @@
         <checkstyle-maven-plugin.version>3.5.0</checkstyle-maven-plugin.version>
         <checkstyle.version>10.18.2</checkstyle.version>
         <spotbugs-maven-plugin.version>4.8.6.4</spotbugs-maven-plugin.version>
-        <dependency-check-maven.version>8.4.3</dependency-check-maven.version>
         <jacoco.version>0.8.12</jacoco.version>
         <sonar.version>4.0.0.4121</sonar.version>
         <spotless.version>2.43.0</spotless.version>
@@ -238,9 +237,19 @@
                     <version>${spotbugs-maven-plugin.version}</version>
                 </plugin>
                 <plugin>
+                    <groupId>org.jacoco</groupId>
+                    <artifactId>jacoco-maven-plugin</artifactId>
+                    <version>${jacoco.version}</version>
+                </plugin>
+                <plugin>
                     <groupId>org.sonarsource.scanner.maven</groupId>
                     <artifactId>sonar-maven-plugin</artifactId>
                     <version>${sonar.version}</version>
+                </plugin>
+                <plugin>
+                    <groupId>com.diffplug.spotless</groupId>
+                    <artifactId>spotless-maven-plugin</artifactId>
+                    <version>${spotless.version}</version>
                 </plugin>
             </plugins>
         </pluginManagement>
@@ -495,7 +504,6 @@
                     <plugin>
                         <groupId>org.jacoco</groupId>
                         <artifactId>jacoco-maven-plugin</artifactId>
-                        <version>${jacoco.version}</version>
                         <executions>
                             <execution>
                                 <id>prepare-agent</id>
