@@ -8,11 +8,11 @@
     
     <organization>
         <name>Global Dataverse Community Consortium</name>
-        <url>https://dataversecommunity.global</url>
+        <url>https://www.gdcc.io</url>
     </organization>
     
     <name>Universal GDCC Parent POM</name>
-    <url>https://github.com/gdcc/maven-parent</url>
+    <url>https://github.com/${project.github.org}</url>
     <description>Parent POM for easy coordination of all GDCC and IQSS Dataverse-related Java project POMs</description>
     
     <licenses>
@@ -34,19 +34,19 @@
     </developers>
     
     <issueManagement>
-        <url>https://github.com/gdcc/maven-parent/issues</url>
+        <url>https://github.com/${project.github.org}/${project.github.repo}/issues</url>
         <system>GitHub Issues</system>
     </issueManagement>
     
     <scm>
-        <connection>scm:git:git@github.com:gdcc/maven-parent.git</connection>
-        <developerConnection>scm:git:git@github.com:gdcc/maven-parent.git</developerConnection>
-        <url>git@github.com:gdcc/maven-parent.git</url>
+        <connection>scm:git:git@github.com:${project.github.org}</connection>
+        <developerConnection>scm:git:git@github.com:${project.github.org}</developerConnection>
+        <url>git@github.com:${project.github.org}</url>
         <tag>HEAD</tag>
     </scm>
     
     <ciManagement>
-        <url>https://github.com/gdcc/maven-parent/actions</url>
+        <url>https://github.com/${project.github.org}/${project.github.repo}/actions</url>
         <system>github</system>
         <notifiers>
             <notifier>
@@ -78,6 +78,8 @@
         <project.timezone>UTC</project.timezone>
         <project.language>en</project.language>
         <project.region>US</project.region>
+        <project.github.org>gdcc</project.github.org>
+        <project.github.repo>${project.artifactId}</project.github.repo>
         <argLine>-Duser.timezone=${project.timezone} -Dfile.encoding=${project.build.sourceEncoding} -Duser.language=${project.language} -Duser.region=${project.region}</argLine>
         <skipUT>false</skipUT>
         <skipIT>false</skipIT>
