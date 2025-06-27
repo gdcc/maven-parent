@@ -33,8 +33,8 @@ jobs:
           server-username: MAVEN_USERNAME
           server-password: MAVEN_PASSWORD
       - name: Publish snapshot
-        # Note: -Dchecker.strict=false is only useful for this Parent POM to make <repositories> available to children!
-        run: mvn deploy -DskipUT -DskipIT -DskipFlatten -Dchecker.strict=false
+        # Note: -DskipEnforce.pomcheck-strict=false is only useful for this Parent POM to make <repositories> available to children!
+        run: mvn deploy -DskipUT -DskipIT -DskipFlatten -DskipEnforce.pomcheck-strict=false
         env:
           MAVEN_USERNAME: ${{ secrets.DATAVERSEBOT_SONATYPE_USERNAME }}
           MAVEN_PASSWORD: ${{ secrets.DATAVERSEBOT_SONATYPE_TOKEN }}

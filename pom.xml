@@ -125,6 +125,7 @@
         <skipEnforce.log-libs>true</skipEnforce.log-libs>
         <skipEnforce.convergence>true</skipEnforce.convergence>
         <skipEnforce.pomcheck-warn-is-no-error>false</skipEnforce.pomcheck-warn-is-no-error>
+        <skipEnforce.pomcheck-strict>true</skipEnforce.pomcheck-strict>
         <skipSign>false</skipSign>
         <skipRelease>false</skipRelease>
         
@@ -589,6 +590,7 @@
                                         <CheckMavenCentral implementation="org.kordamp.maven.enforcer.checker.CheckMavenCentral">
                                             <failOnWarning>!${skipEnforce.pomcheck-warn-is-no-error}</failOnWarning>
                                             <release>!${skipRelease}</release>
+                                            <strict>${skipEnforce.pomcheck-strict}</strict>
                                         </CheckMavenCentral>
                                     </rules>
                                 </configuration>
