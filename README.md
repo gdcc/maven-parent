@@ -1,5 +1,13 @@
 # maven-parent
 
+🚨 **BREAKING CHANGE** 🚨
+
+☝️ *THIS PARENT POM HAS BEEN UPGRADED TO ENABLE CENTRAL PORTAL PUBLISHING* ☝️  
+See also https://central.sonatype.org/news/20250326_ossrh_sunset/ for more information.
+Make sure to adapt your CI workflows: new server id `central` and it will require new tokens in CI secrets!
+
+----
+
 A common Maven Parent for all GDCC and IQSS Java projects:
 
 ```xml
@@ -9,10 +17,6 @@ A common Maven Parent for all GDCC and IQSS Java projects:
     <version>x.y.z</version>
 </parent>
 ```
-
-🚨 PLEASE NOTE: THIS PARENT MODULE HAS BEEN UPGRADED TO USE THE NEW CENTRAL PORTAL PUBLISHING METHOD! 🚨  
-See also https://central.sonatype.org/news/20250326_ossrh_sunset/ for more information.
-Make sure to adapt your CI workflows: new server id `central` and it will require new tokens in CI secrets!
 
 Aside from dependencies and plugin management, the Parent POM provides sane defaults for `<groupId>` and the extended project information bits `<url>`, `<organization>`, `<issueManagement>`, `<scm>`, `<ciManagement>` and `<distributionManagement>`.
 You can always completely override them in a child project.
