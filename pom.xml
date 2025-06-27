@@ -129,7 +129,7 @@
         <checkstyle.version>10.26.0</checkstyle.version>
         <spotbugs-maven-plugin.version>4.8.6.4</spotbugs-maven-plugin.version>
         <jacoco.version>0.8.13</jacoco.version>
-        <sonar.version>4.0.0.4121</sonar.version>
+        <sonar.version>5.1.0.4751</sonar.version>
         <spotless.version>2.43.0</spotless.version>
     </properties>
     
