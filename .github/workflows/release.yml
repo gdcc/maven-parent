@@ -44,7 +44,8 @@ jobs:
 
       - name: Sign + Publish release
         # Note: -DskipEnforce.pomcheck-strict=false is only useful for this Parent POM to make <repositories> available to children!
-        run: mvn -Prelease deploy -DskipUT -DskipIT -DskipFlatten -DskipEnforce.pomcheck-strict=false
+        # Note: -Dproject.github.repo=maven-parent is necessary so we can keep project.artifactId the sane default for children
+        run: mvn -Prelease deploy -DskipUT -DskipIT -DskipFlatten -DskipEnforce.pomcheck-strict=false -Dproject.github.repo=maven-parent
         env:
           MAVEN_USERNAME: ${{ secrets.DATAVERSEBOT_SONATYPE_USERNAME }}
           MAVEN_PASSWORD: ${{ secrets.DATAVERSEBOT_SONATYPE_TOKEN }}
