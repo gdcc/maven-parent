@@ -10,6 +10,7 @@
   automergeSchedule: ["* * * * 0"],
 
   packageRules: [
+    // See https://github.com/renovatebot/renovate/blob/0cf7272abcf1911e0553b9c36063218daf44d5cd/lib/modules/manager/maven/extract.ts#L190-L207 for Maven Dev Types
     {
       description: "Group Maven Plugin and Plugin Dependency updates",
       matchDepTypes: ["build"],
@@ -17,6 +18,16 @@
       matchUpdateTypes: ["minor", "patch"],
       matchCurrentVersion: "!/^0/",
       automerge: true
+    },
+    {
+      description: "Group Test Dependency Updates",
+      matchDepTypes: ["test"],
+      groupName: "Test Dependency Updates",
+    },
+    {
+      description: "Group Dependency Updates",
+      matchDepTypes: ["compile", "runtime"],
+      groupName: "Dependency Updates",
     }
   ],
 
