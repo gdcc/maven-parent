@@ -140,6 +140,7 @@
         <xmlunit.version>2.10.3</xmlunit.version>
         <hamcrest.version>3.0</hamcrest.version>
         <jsonassert.version>1.5.3</jsonassert.version>
+        <testcontainers.version>1.21.3  </testcontainers.version>
         
         <!-- Official Maven Plugins -->
         <maven-plugin-api.version>3.8.2</maven-plugin-api.version>
@@ -168,6 +169,7 @@
         <spotbugs-maven-plugin.version>4.9.3.2</spotbugs-maven-plugin.version>
         <jacoco.version>0.8.13</jacoco.version>
         <sonar.version>5.1.0.4751</sonar.version>
+        <dependency-check-maven.version>12.1.3</dependency-check-maven.version>
         <spotless.version>2.44.5</spotless.version>
     </properties>
     
@@ -285,6 +287,11 @@
                     <groupId>org.sonarsource.scanner.maven</groupId>
                     <artifactId>sonar-maven-plugin</artifactId>
                     <version>${sonar.version}</version>
+                </plugin>
+                <plugin>
+                    <groupId>org.owasp</groupId>
+                    <artifactId>dependency-check-maven</artifactId>
+                    <version>${dependency-check-maven.version}</version>
                 </plugin>
                 <plugin>
                     <groupId>com.diffplug.spotless</groupId>
@@ -526,6 +533,13 @@
                 <groupId>org.skyscreamer</groupId>
                 <artifactId>jsonassert</artifactId>
                 <version>${jsonassert.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.testcontainers</groupId>
+                <artifactId>testcontainers-bom</artifactId>
+                <version>${testcontainers.version}</version>
+                <scope>import</scope>
+                <type>pom</type>
             </dependency>
         </dependencies>
     </dependencyManagement>
