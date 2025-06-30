@@ -144,7 +144,7 @@
         <dataverse.spi.version>2.0.0</dataverse.spi.version>
         <google.auto.service.version>1.1.1</google.auto.service.version>
         <slf4j.version>2.0.17</slf4j.version>
-        <apache-commons-io.version>2.13.0</apache-commons-io.version>
+        <apache-commons-io.version>2.14.0</apache-commons-io.version>
         
         <!-- Testing dependencies -->
         <junit.jupiter.version>5.13.2</junit.jupiter.version>
