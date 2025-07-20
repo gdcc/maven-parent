@@ -171,7 +171,7 @@
         <maven-gpg-plugin.version>3.2.8</maven-gpg-plugin.version>
         <maven-release-plugin.version>3.1.1</maven-release-plugin.version>
         <maven-resources-plugin.version>3.3.1</maven-resources-plugin.version>
-        <maven-enforcer-plugin.version>3.6.0</maven-enforcer-plugin.version>
+        <maven-enforcer-plugin.version>3.6.1</maven-enforcer-plugin.version>
         
         <pomchecker.version>1.14.0</pomchecker.version>
         <central-publishing-plugin.version>0.8.0</central-publishing-plugin.version>
@@ -181,7 +181,7 @@
         <jacoco.version>0.8.13</jacoco.version>
         <sonar.version>5.1.0.4751</sonar.version>
         <dependency-check-maven.version>12.1.3</dependency-check-maven.version>
-        <spotless.version>2.44.5</spotless.version>
+        <spotless.version>2.45.0</spotless.version>
         <pmd-plugin.version>3.27.0</pmd-plugin.version>
         <pmd.version>7.15.0</pmd.version>
     </properties>
