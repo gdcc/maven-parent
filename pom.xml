@@ -156,7 +156,7 @@
         <!-- Official Maven Plugins -->
         <maven-plugin-api.version>3.8.2</maven-plugin-api.version>
         <maven-plugin-annotations.version>3.6.4</maven-plugin-annotations.version>
-        <maven-compiler-plugin.version>3.14.0</maven-compiler-plugin.version>
+        <maven-compiler-plugin.version>3.14.1</maven-compiler-plugin.version>
         <maven-jar-plugin.version>3.4.2</maven-jar-plugin.version>
         <maven-war-plugin.version>3.4.0</maven-war-plugin.version>
         <maven-dependency-plugin.version>3.8.1</maven-dependency-plugin.version>
@@ -180,7 +180,7 @@
         <spotbugs-maven-plugin.version>4.9.6.0</spotbugs-maven-plugin.version>
         <jacoco.version>0.8.13</jacoco.version>
         <sonar.version>5.2.0.4988</sonar.version>
-        <dependency-check-maven.version>12.1.5</dependency-check-maven.version>
+        <dependency-check-maven.version>12.1.6</dependency-check-maven.version>
         <spotless.version>2.46.1</spotless.version>
         <pmd-plugin.version>3.27.0</pmd-plugin.version>
         <pmd.version>7.17.0</pmd.version>
