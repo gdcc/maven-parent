@@ -177,10 +177,10 @@
         <central-publishing-plugin.version>0.8.0</central-publishing-plugin.version>
         <checkstyle-maven-plugin.version>3.6.0</checkstyle-maven-plugin.version>
         <checkstyle.version>10.26.1</checkstyle.version>
-        <spotbugs-maven-plugin.version>4.9.6.0</spotbugs-maven-plugin.version>
+        <spotbugs-maven-plugin.version>4.9.8.0</spotbugs-maven-plugin.version>
         <jacoco.version>0.8.13</jacoco.version>
         <sonar.version>5.2.0.4988</sonar.version>
-        <dependency-check-maven.version>12.1.6</dependency-check-maven.version>
+        <dependency-check-maven.version>12.1.8</dependency-check-maven.version>
         <spotless.version>2.46.1</spotless.version>
         <pmd-plugin.version>3.28.0</pmd-plugin.version>
         <pmd.version>7.17.0</pmd.version>
