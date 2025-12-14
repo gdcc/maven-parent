@@ -169,7 +169,7 @@
         <maven-javadoc-plugin.version>3.12.0</maven-javadoc-plugin.version>
         <maven-flatten-plugin.version>1.7.3</maven-flatten-plugin.version>
         <maven-gpg-plugin.version>3.2.8</maven-gpg-plugin.version>
-        <maven-release-plugin.version>3.2.0</maven-release-plugin.version>
+        <maven-release-plugin.version>3.3.1</maven-release-plugin.version>
         <maven-resources-plugin.version>3.4.0</maven-resources-plugin.version>
         <maven-enforcer-plugin.version>3.6.2</maven-enforcer-plugin.version>
         
@@ -179,7 +179,7 @@
         <checkstyle.version>10.26.1</checkstyle.version>
         <spotbugs-maven-plugin.version>4.9.8.2</spotbugs-maven-plugin.version>
         <jacoco.version>0.8.13</jacoco.version>
-        <sonar.version>5.3.0.6276</sonar.version>
+        <sonar.version>5.5.0.6356</sonar.version>
         <dependency-check-maven.version>12.1.9</dependency-check-maven.version>
         <spotless.version>2.46.1</spotless.version>
         <pmd-plugin.version>3.28.0</pmd-plugin.version>
