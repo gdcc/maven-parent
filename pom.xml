@@ -144,11 +144,11 @@
         <dataverse.spi.version>2.0.0</dataverse.spi.version>
         <google.auto.service.version>1.1.1</google.auto.service.version>
         <slf4j.version>2.0.17</slf4j.version>
-        <apache-commons-io.version>2.14.0</apache-commons-io.version>
+        <apache-commons-io.version>2.21.0</apache-commons-io.version>
         
         <!-- Testing dependencies -->
-        <junit.jupiter.version>5.13.2</junit.jupiter.version>
-        <xmlunit.version>2.10.3</xmlunit.version>
+        <junit.jupiter.version>5.14.2</junit.jupiter.version>
+        <xmlunit.version>2.11.0</xmlunit.version>
         <hamcrest.version>3.0</hamcrest.version>
         <jsonassert.version>1.5.3</jsonassert.version>
         <testcontainers.version>1.21.3  </testcontainers.version>
