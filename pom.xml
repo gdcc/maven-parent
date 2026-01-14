@@ -178,7 +178,7 @@
         <checkstyle-maven-plugin.version>3.6.0</checkstyle-maven-plugin.version>
         <checkstyle.version>10.26.1</checkstyle.version>
         <spotbugs-maven-plugin.version>4.9.8.2</spotbugs-maven-plugin.version>
-        <jacoco.version>0.8.13</jacoco.version>
+        <jacoco.version>0.8.14</jacoco.version>
         <sonar.version>5.5.0.6356</sonar.version>
         <dependency-check-maven.version>12.1.9</dependency-check-maven.version>
         <spotless.version>2.46.1</spotless.version>
