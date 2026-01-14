@@ -23,15 +23,16 @@ You can always completely override them in a child project.
 
 ## Important variables
 
-| Maven Property          | Description                                                         |
-|-------------------------|---------------------------------------------------------------------|
-| `jdk.version`           | The minimum Java version a project can be used with                 |
-| `skipUT`                | Skip executing unit tests with Surefire                             |
-| `skipIT`                | Skip executing integration tests with Failsafe                      |
-| `skipFlatten`           | Skip executing the Maven Flatten plugin                             |
-| `enable.snapshot.repos` | Set to true to enable usage of Maven Central Snapshot repositories  |
-| `project.github.org`    | Default `gdcc`, influencing project info                            |
-| `project.github.repo`   | Default `${project.artifactId}`, influencing project info           |
+| Maven Property          | Description                                                        |
+|-------------------------|--------------------------------------------------------------------|
+| `jdk.version`           | The minimum Java version a project can be used with                |
+| `jakarta-ee.version`    | The Jakarta EE version, setting compile-time expectations          |
+| `skipUT`                | Skip executing unit tests with Surefire                            |
+| `skipIT`                | Skip executing integration tests with Failsafe                     |
+| `skipFlatten`           | Skip executing the Maven Flatten plugin                            |
+| `enable.snapshot.repos` | Set to true to enable usage of Maven Central Snapshot repositories |
+| `project.github.org`    | Default `gdcc`, influencing project info                           |
+| `project.github.repo`   | Default `${project.artifactId}`, influencing project info          |
 
 (There are more, docs to be done)
 

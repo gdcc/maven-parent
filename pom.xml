@@ -141,6 +141,7 @@
         
         <!-- Dependencies -->
         <enable.snapshot.repos>false</enable.snapshot.repos>
+        <jakarta-ee.version>10.0.0</jakarta-ee.version>
         <dataverse.spi.version>2.0.0</dataverse.spi.version>
         <google.auto.service.version>1.1.1</google.auto.service.version>
         <slf4j.version>2.0.17</slf4j.version>
@@ -532,6 +533,16 @@
                 <groupId>commons-io</groupId>
                 <artifactId>commons-io</artifactId>
                 <version>${apache-commons-io.version}</version>
+            </dependency>
+            <!-- The Jakarta EE platform we target -->
+            <!-- Please note: this does not ensure the runtime compatibility with the server platform (Payara)
+                 and their implementations of the APIs. It's intended as a compile-time hint only. -->
+            <dependency>
+                <groupId>jakarta.platform</groupId>
+                <artifactId>jakarta.jakartaee-bom</artifactId>
+                <version>${jakarta-ee.version}</version>
+                <scope>import</scope>
+                <type>pom</type>
             </dependency>
             
             <!-- TESTING DEPENDENCIES -->
