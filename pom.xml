@@ -182,7 +182,7 @@
         <jacoco.version>0.8.14</jacoco.version>
         <sonar.version>5.5.0.6356</sonar.version>
         <dependency-check-maven.version>12.2.0</dependency-check-maven.version>
-        <spotless.version>2.46.1</spotless.version>
+        <spotless.version>3.2.1</spotless.version>
         <pmd-plugin.version>3.28.0</pmd-plugin.version>
         <pmd.version>7.20.0</pmd.version>
     </properties>
