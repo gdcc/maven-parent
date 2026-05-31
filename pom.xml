@@ -148,8 +148,8 @@
         <apache-commons-io.version>2.22.0</apache-commons-io.version>
         
         <!-- Testing dependencies -->
-        <junit.jupiter.version>6.0.3</junit.jupiter.version>
-        <xmlunit.version>2.11.0</xmlunit.version>
+        <junit.jupiter.version>6.1.0</junit.jupiter.version>
+        <xmlunit.version>2.12.0</xmlunit.version>
         <hamcrest.version>3.0</hamcrest.version>
         <jsonassert.version>1.5.3</jsonassert.version>
         <testcontainers.version>2.0.5  </testcontainers.version>
