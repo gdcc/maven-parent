@@ -175,7 +175,7 @@
         <maven-enforcer-plugin.version>3.6.3</maven-enforcer-plugin.version>
         
         <pomchecker.version>1.15.0</pomchecker.version>
-        <central-publishing-plugin.version>0.10.0</central-publishing-plugin.version>
+        <central-publishing-plugin.version>0.11.0</central-publishing-plugin.version>
         <checkstyle-maven-plugin.version>3.6.0</checkstyle-maven-plugin.version>
         <checkstyle.version>13.8.0</checkstyle.version>
         <spotbugs-maven-plugin.version>4.10.3.0</spotbugs-maven-plugin.version>
