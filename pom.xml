@@ -181,7 +181,7 @@
         <spotbugs-maven-plugin.version>4.10.4.1</spotbugs-maven-plugin.version>
         <jacoco.version>0.8.14</jacoco.version>
         <sonar.version>5.7.0.6970</sonar.version>
-        <dependency-check-maven.version>12.2.2</dependency-check-maven.version>
+        <dependency-check-maven.version>13.0.0</dependency-check-maven.version>
         <spotless.version>3.10.2</spotless.version>
         <pmd-plugin.version>3.28.0</pmd-plugin.version>
         <pmd.version>7.27.0</pmd.version>
