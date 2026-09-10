@@ -118,7 +118,8 @@
         <jdk.version>11</jdk.version>
         
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <javadoc.lint>none</javadoc.lint>
+        <!-- Keep strict HTML/syntax checks, but stop nagging about missing comments -->
+        <javadoc.lint>all,-missing</javadoc.lint>
         <!-- Needed to avoid IDEA IDE compilation failures. See commits in GH #5059 -->
         <compilerArgument />
         <project.timezone>UTC</project.timezone>
@@ -337,7 +338,16 @@
                 <artifactId>maven-compiler-plugin</artifactId>
                 <configuration>
                     <release>${jdk.version}</release>
+                    <!-- Different compiler argument config will be merged together -->
                     <compilerArgument>${compilerArgument}</compilerArgument>
+                    <compilerArgs>
+                        <!--
+                          Trigger Javadoc linting at compile time to get early feedback during IDE builds.
+                          Keep strict HTML/syntax checks, but stop nagging about missing comments.
+                          Custom tags are ignored by javac doclinting.
+                        -->
+                        <arg>-Xdoclint:all,-missing</arg>
+                    </compilerArgs>
                 </configuration>
             </plugin>
             <plugin>
@@ -690,6 +700,21 @@
                             <source>${jdk.version}</source>
                             <detectJavaApiLink>false</detectJavaApiLink>
                             <doclint>${javadoc.lint}</doclint>
+                            <failOnWarnings>false</failOnWarnings>
+                            <quiet>true</quiet>
+                            <!-- Beneficial for bit-equal builds on successive builds -->
+                            <notimestamp>true</notimestamp>
+                            <!-- Add modern tags not yet included by default. https://nipafx.dev/javadoc-tags-apiNote-implSpec-implNote -->
+                            <tags>
+                                <tag><name>apiNote</name><placement>a</placement><head>API Note:</head></tag>
+                                <tag><name>implSpec</name><placement>a</placement><head>Implementation Requirements:</head></tag>
+                                <tag><name>implNote</name><placement>a</placement><head>Implementation Note:</head></tag>
+                            </tags>
+                            <!-- Make some links clickable, more reliable and faster than the "detectLinks" option -->
+                            <links>
+                                <link>https://jakarta.ee/specifications/jsonp/2.1/apidocs/</link>
+                                <link>https://www.slf4j.org/apidocs/</link>
+                            </links>
                         </configuration>
                     </plugin>
                     <plugin>
