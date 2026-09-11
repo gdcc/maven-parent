@@ -440,6 +440,30 @@
                     </execution>
                 </executions>
             </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-javadoc-plugin</artifactId>
+                <configuration>
+                    <source>${jdk.version}</source>
+                    <detectJavaApiLink>false</detectJavaApiLink>
+                    <doclint>${javadoc.lint}</doclint>
+                    <failOnWarnings>false</failOnWarnings>
+                    <quiet>true</quiet>
+                    <!-- Beneficial for bit-equal builds on successive builds -->
+                    <notimestamp>true</notimestamp>
+                    <!-- Add modern tags not yet included by default. https://nipafx.dev/javadoc-tags-apiNote-implSpec-implNote -->
+                    <tags>
+                        <tag><name>apiNote</name><placement>a</placement><head>API Note:</head></tag>
+                        <tag><name>implSpec</name><placement>a</placement><head>Implementation Requirements:</head></tag>
+                        <tag><name>implNote</name><placement>a</placement><head>Implementation Note:</head></tag>
+                    </tags>
+                    <!-- Make some links clickable, more reliable and faster than the "detectLinks" option -->
+                    <links>
+                        <link>https://jakarta.ee/specifications/jsonp/2.1/apidocs/</link>
+                        <link>https://www.slf4j.org/apidocs/</link>
+                    </links>
+                </configuration>
+            </plugin>
             
             <!-- META -->
             <plugin>
@@ -708,26 +732,6 @@
                                 </goals>
                             </execution>
                         </executions>
-                        <configuration>
-                            <source>${jdk.version}</source>
-                            <detectJavaApiLink>false</detectJavaApiLink>
-                            <doclint>${javadoc.lint}</doclint>
-                            <failOnWarnings>false</failOnWarnings>
-                            <quiet>true</quiet>
-                            <!-- Beneficial for bit-equal builds on successive builds -->
-                            <notimestamp>true</notimestamp>
-                            <!-- Add modern tags not yet included by default. https://nipafx.dev/javadoc-tags-apiNote-implSpec-implNote -->
-                            <tags>
-                                <tag><name>apiNote</name><placement>a</placement><head>API Note:</head></tag>
-                                <tag><name>implSpec</name><placement>a</placement><head>Implementation Requirements:</head></tag>
-                                <tag><name>implNote</name><placement>a</placement><head>Implementation Note:</head></tag>
-                            </tags>
-                            <!-- Make some links clickable, more reliable and faster than the "detectLinks" option -->
-                            <links>
-                                <link>https://jakarta.ee/specifications/jsonp/2.1/apidocs/</link>
-                                <link>https://www.slf4j.org/apidocs/</link>
-                            </links>
-                        </configuration>
                     </plugin>
                     <plugin>
                         <groupId>org.apache.maven.plugins</groupId>
