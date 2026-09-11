@@ -358,7 +358,7 @@
                           Keep strict HTML/syntax checks, but stop nagging about missing comments.
                           Custom tags are ignored by javac doclinting.
                         -->
-                        <arg>-Xdoclint:all,-missing</arg>
+                        <arg>-Xdoclint:${javadoc.lint}</arg>
                     </compilerArgs>
                 </configuration>
             </plugin>
